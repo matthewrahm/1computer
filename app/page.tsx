@@ -1,65 +1,117 @@
-import Image from "next/image";
+"use client";
+
+import { MountainField } from "@/components/ui/mountain-field";
+import { FogField } from "@/components/ui/fog-field";
+import { CloudField } from "@/components/ui/cloud-field";
+import { CursorTrail } from "@/components/ui/cursor-trail";
+import { FloatingNav } from "@/components/layout/floating-nav";
+import { Footer } from "@/components/layout/footer";
+import { Hero } from "@/components/sections/hero";
+import { Manifesto } from "@/components/sections/manifesto";
+import { Interstitial } from "@/components/sections/interstitial";
+import { TheProof } from "@/components/sections/the-proof";
+import { Gallery } from "@/components/sections/gallery";
+import { Dataflow } from "@/components/sections/dataflow";
+import { Tokenomics } from "@/components/sections/tokenomics";
+import { ContractInfo } from "@/components/sections/contract-info";
+import { Community } from "@/components/sections/community";
+import { Marquee } from "@/components/ui/marquee";
+import { SceneManager } from "@/components/ui/scene-manager";
+import { Scene } from "@/components/ui/scene";
+import { SceneNav } from "@/components/ui/scene-nav";
+import { interstitials } from "@/data/interstitials";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <MountainField />
+      <FogField />
+      <CloudField />
+      <CursorTrail />
+      <FloatingNav />
+      <SceneNav />
+
+      <main>
+        <SceneManager>
+          {/* Scene 0: Hero */}
+          <Scene index={0} id="hero" scrollHeight="300vh" transition="ZOOM_OUT_TO_COSMOS">
+            {(progress) => <Hero activeProgress={progress} />}
+          </Scene>
+
+          {/* Scene 1: The Doubt */}
+          <Scene index={1} id="manifesto" scrollHeight="300vh" transition="DEPTH_DIVE">
+            {(progress) => <Manifesto activeProgress={progress} />}
+          </Scene>
+
+          {/* Scene 2: The Grind — full-bleed darkness */}
+          <Scene index={2} scrollHeight="150vh" transition="CINEMATIC_WIPE">
+            {(progress) => (
+              <Interstitial
+                quote={interstitials[0].quote}
+                bgImage={interstitials[0].bgImage}
+                activeProgress={progress}
+              />
+            )}
+          </Scene>
+
+          {/* Scene 3: The Proof */}
+          <Scene index={3} scrollHeight="300vh" transition="SETTLE_DOWN">
+            {(progress) => <TheProof activeProgress={progress} />}
+          </Scene>
+
+          {/* Scene 4: The Path */}
+          <Scene index={4} scrollHeight="400vh" transition="FOLD_AWAY">
+            {(progress) => <Dataflow activeProgress={progress} />}
+          </Scene>
+
+          {/* Scene 5: Gallery */}
+          <Scene index={5} id="gallery" scrollHeight="200vh" transition="SETTLE_DOWN">
+            {() => <Gallery />}
+          </Scene>
+
+          {/* Scene 6: Marquee + Tokenomics */}
+          <Scene index={6} id="tokenomics" scrollHeight="200vh" transition="ZOOM_OUT_TO_COSMOS">
+            {() => (
+              <div className="flex h-screen flex-col">
+                <Marquee text="1 COMPUTER 1 DREAM • $1COMPUTER ON SOLANA •" reverse speed={25} />
+                <div className="flex flex-1 items-center justify-center">
+                  <Tokenomics />
+                </div>
+              </div>
+            )}
+          </Scene>
+
+          {/* Scene 7: Contract Info */}
+          <Scene index={7} id="buy" scrollHeight="200vh" transition="CINEMATIC_WIPE">
+            {() => <ContractInfo />}
+          </Scene>
+
+          {/* Scene 8: The Summit — final interstitial */}
+          <Scene index={8} scrollHeight="150vh" transition="SHATTER">
+            {(progress) => (
+              <Interstitial
+                quote={interstitials[1].quote}
+                bgImage={interstitials[1].bgImage}
+                activeProgress={progress}
+              />
+            )}
+          </Scene>
+
+          {/* Scene 9: Community + Marquee */}
+          <Scene index={9} scrollHeight="200vh" transition="DEPTH_DIVE">
+            {() => (
+              <div className="flex h-screen flex-col">
+                <div className="flex flex-1 items-center justify-center">
+                  <Community />
+                </div>
+                <Marquee text="WIFI AND A VISION • 1 COMPUTER 1 DREAM • $1COMPUTER •" speed={30} />
+              </div>
+            )}
+          </Scene>
+        </SceneManager>
       </main>
-    </div>
+
+      <Footer />
+    </>
   );
 }
