@@ -6,7 +6,7 @@ import { CopyButton } from "@/components/ui/copy-button";
 import { ExternalLink } from "lucide-react";
 import { GlitchText } from "@/components/ui/glitch-text";
 
-const CONTRACT_ADDRESS = "PLACEHOLDER_CA_HERE";
+const CONTRACT_ADDRESS = "Hg7TS1GMo1bGKJWsSQNgh3CzLFudSRH4tu5DHYNapump";
 
 interface MarketData { marketCap: number | null; priceUsd: string | null; volume24h: number | null; priceChange24h: number | null; }
 

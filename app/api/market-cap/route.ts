@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const TOKEN_ADDRESS = "PLACEHOLDER_CA_HERE";
+const TOKEN_ADDRESS = "Hg7TS1GMo1bGKJWsSQNgh3CzLFudSRH4tu5DHYNapump";
 
 export async function GET() {
   try {
