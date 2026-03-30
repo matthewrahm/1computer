@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@placeholder_handle",
+    site: "@1Computer1Dream",
     title: "1 Computer, 1 Dream | $1COMPUTER",
     description:
       "All it takes is one computer and a dream. $1COMPUTER on Solana.",

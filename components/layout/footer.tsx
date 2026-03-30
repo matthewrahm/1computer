@@ -15,7 +15,7 @@ export function Footer() {
             <Image src="/images/1computer-hero.jpeg" alt="$1COMPUTER" width={40} height={40} className="rounded-full" />
             <span className="text-xl text-text-primary">$1COMPUTER</span>
           </div>
-          <a href="https://x.com/placeholder_handle" target="_blank" rel="noopener noreferrer" className="rounded-full bg-surface p-3 text-text-secondary transition-colors hover:bg-surface-elevated hover:text-text-primary">
+          <a href="https://x.com/1Computer1Dream" target="_blank" rel="noopener noreferrer" className="rounded-full bg-surface p-3 text-text-secondary transition-colors hover:bg-surface-elevated hover:text-text-primary">
             <XIcon className="h-5 w-5" />
           </a>
           <p className="max-w-md text-sm text-text-muted">&ldquo;1 computer. That&apos;s it. That&apos;s the tweet.&rdquo;</p>

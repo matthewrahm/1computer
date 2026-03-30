@@ -17,7 +17,7 @@ export function Community() {
         <div className="mx-auto mb-10 w-full max-w-lg overflow-hidden rounded-2xl">
           <Image src="/images/gallery/coastal-cliff.jpeg" alt="1 Computer, 1 Dream" width={1280} height={960} className="w-full" />
         </div>
-        <a href="https://x.com/placeholder_handle" target="_blank" rel="noopener noreferrer" className="btn-primary">
+        <a href="https://x.com/1Computer1Dream" target="_blank" rel="noopener noreferrer" className="btn-primary">
           <XIcon className="h-5 w-5" />Follow on X
         </a>
       </div>
