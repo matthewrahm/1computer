@@ -12,8 +12,8 @@ export function Footer() {
       <div className="mx-auto max-w-5xl px-6 py-12">
         <div className="flex flex-col items-center gap-6 text-center">
           <div className="flex items-center gap-3">
-            <Image src="/images/1computer-hero.jpeg" alt="$1COMPUTER" width={40} height={40} className="rounded-full" />
-            <span className="text-xl text-text-primary">$1COMPUTER</span>
+            <Image src="/images/1computer-hero.jpeg" alt="$DREAM" width={40} height={40} className="rounded-full" />
+            <span className="text-xl text-text-primary">$DREAM</span>
           </div>
           <a href="https://x.com/1Computer1Dream" target="_blank" rel="noopener noreferrer" className="rounded-full bg-surface p-3 text-text-secondary transition-colors hover:bg-surface-elevated hover:text-text-primary">
             <XIcon className="h-5 w-5" />

@@ -50,12 +50,12 @@ export function Hero({ activeProgress }: HeroProps) {
         </h1>
 
         <motion.div style={{ opacity: ctaOpacity, y: ctaY }} className="flex flex-col items-center">
-          <p className="mb-4 font-mono text-sm tracking-[0.3em] text-accent-muted">$1COMPUTER</p>
+          <p className="mb-4 font-mono text-sm tracking-[0.3em] text-accent-muted">$DREAM</p>
           <p className="mb-6 font-serif text-lg text-text-muted italic">WiFi and a vision. That&apos;s the whole playbook.</p>
           <div className="mb-6 h-px w-32 bg-gradient-to-r from-transparent via-accent-muted/40 to-transparent" />
           <div className="flex gap-4">
             <button onClick={() => document.getElementById("manifesto")?.scrollIntoView({ behavior: "smooth" })} className="btn-secondary">Explore</button>
-            <button onClick={() => document.getElementById("buy")?.scrollIntoView({ behavior: "smooth" })} className="btn-primary px-8 ring-1 ring-accent/20">Buy $1COMPUTER</button>
+            <button onClick={() => document.getElementById("buy")?.scrollIntoView({ behavior: "smooth" })} className="btn-primary px-8 ring-1 ring-accent/20">Buy $DREAM</button>
           </div>
         </motion.div>
       </div>

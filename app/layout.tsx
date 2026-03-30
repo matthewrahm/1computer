@@ -32,19 +32,19 @@ const cormorant = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://1computer.lol"),
-  title: "1 Computer, 1 Dream | $1COMPUTER on Solana",
+  title: "1 Computer, 1 Dream | $DREAM on Solana",
   description:
-    "They said you need connections. You need money. You need luck. All you needed was one computer. $1COMPUTER on Solana.",
+    "They said you need connections. You need money. You need luck. All you needed was one computer. $DREAM on Solana.",
   openGraph: {
-    title: "1 Computer, 1 Dream | $1COMPUTER",
+    title: "1 Computer, 1 Dream | $DREAM",
     description:
-      "All it takes is one computer and a dream. $1COMPUTER on Solana.",
+      "All it takes is one computer and a dream. $DREAM on Solana.",
     images: [
       {
         url: "/images/1computer-banner.jpeg",
         width: 1200,
         height: 630,
-        alt: "1 Computer, 1 Dream — $1COMPUTER on Solana",
+        alt: "1 Computer, 1 Dream — $DREAM on Solana",
       },
     ],
     type: "website",
@@ -53,15 +53,15 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@1Computer1Dream",
-    title: "1 Computer, 1 Dream | $1COMPUTER",
+    title: "1 Computer, 1 Dream | $DREAM",
     description:
-      "All it takes is one computer and a dream. $1COMPUTER on Solana.",
+      "All it takes is one computer and a dream. $DREAM on Solana.",
     images: [
       {
         url: "/images/1computer-banner.jpeg",
         width: 1200,
         height: 630,
-        alt: "1 Computer, 1 Dream — $1COMPUTER on Solana",
+        alt: "1 Computer, 1 Dream — $DREAM on Solana",
       },
     ],
   },

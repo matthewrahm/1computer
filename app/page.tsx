@@ -73,7 +73,7 @@ export default function Home() {
           <Scene index={6} id="tokenomics" scrollHeight="200vh" transition="ZOOM_OUT_TO_COSMOS">
             {() => (
               <div className="flex h-screen flex-col">
-                <Marquee text="1 COMPUTER 1 DREAM • $1COMPUTER ON SOLANA •" reverse speed={25} />
+                <Marquee text="1 COMPUTER 1 DREAM • $DREAM ON SOLANA •" reverse speed={25} />
                 <div className="flex flex-1 items-center justify-center">
                   <Tokenomics />
                 </div>
@@ -104,7 +104,7 @@ export default function Home() {
                 <div className="flex flex-1 items-center justify-center">
                   <Community />
                 </div>
-                <Marquee text="WIFI AND A VISION • 1 COMPUTER 1 DREAM • $1COMPUTER •" speed={30} />
+                <Marquee text="WIFI AND A VISION • 1 COMPUTER 1 DREAM • $DREAM •" speed={30} />
               </div>
             )}
           </Scene>

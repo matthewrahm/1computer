@@ -57,7 +57,7 @@ export function FloatingNav() {
       {pastHero && (
         <motion.nav initial={{ opacity: 0, y: -20 }} animate={{ opacity: visible ? 1 : 0, y: visible ? 0 : -20 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }} className="fixed top-4 left-1/2 z-40 -translate-x-1/2">
           <div className="flex items-center gap-1 rounded-full border border-accent/10 bg-background/70 px-2 py-1.5 backdrop-blur-xl sm:gap-2 sm:px-4">
-            <Image src="/images/1computer-hero.jpeg" alt="$1COMPUTER" width={32} height={32} className="rounded-full" />
+            <Image src="/images/1computer-hero.jpeg" alt="$DREAM" width={32} height={32} className="rounded-full" />
             <div className="hidden items-center gap-1 sm:flex">
               {navLinks.map((link) => (
                 <button key={link.href} onClick={() => handleClick(link.href)} className={cn("rounded-full px-3 py-1.5 text-sm transition-colors", activeSection === link.href.slice(1) ? "bg-accent/10 text-accent" : "text-text-secondary hover:text-text-primary")}>
@@ -65,7 +65,7 @@ export function FloatingNav() {
                 </button>
               ))}
             </div>
-            <button onClick={() => handleClick("#buy")} className="btn-primary hidden py-1.5 text-xs sm:inline-flex">Buy $1COMPUTER</button>
+            <button onClick={() => handleClick("#buy")} className="btn-primary hidden py-1.5 text-xs sm:inline-flex">Buy $DREAM</button>
             <button onClick={() => setMobileOpen(!mobileOpen)} className="rounded-full p-2 text-text-secondary sm:hidden">
               {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
@@ -80,7 +80,7 @@ export function FloatingNav() {
                       {link.label}
                     </button>
                   ))}
-                  <button onClick={() => handleClick("#buy")} className="btn-primary w-full text-sm">Buy $1COMPUTER</button>
+                  <button onClick={() => handleClick("#buy")} className="btn-primary w-full text-sm">Buy $DREAM</button>
                 </div>
               </motion.div>
             )}

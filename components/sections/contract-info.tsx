@@ -55,7 +55,7 @@ export function ContractInfo() {
   return (
     <div className="flex h-screen items-center justify-center px-6">
       <div className="mx-auto w-full max-w-2xl">
-        <GlitchText text="$1COMPUTER" as="h2" className="font-display mb-3 text-center text-4xl font-bold tracking-tight text-text-primary sm:text-5xl md:text-6xl" />
+        <GlitchText text="$DREAM" as="h2" className="font-display mb-3 text-center text-4xl font-bold tracking-tight text-text-primary sm:text-5xl md:text-6xl" />
         <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} className="mb-10 text-center text-text-secondary">
           On Solana — 1 Computer, 1 Dream
         </motion.p>
